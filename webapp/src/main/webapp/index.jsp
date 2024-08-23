@@ -76,7 +76,7 @@ h1, h2, h3, h4, h5, h6 {
     </div>
     
     <div class="w3-col l6 w3-padding-large">
-      <img src="/w3images/tablesetting.jpg" class="w3-round w3-image w3-opacity-min" alt="Menu" style="width:100%">
+      <img src="https://spacebar.th/_next/image?url=https%3A%2F%2Fcdn.spacebar.th%2Fscientists_may_finally_know_why_dogs_wag_their_tails_SPACEBAR_Hero_cb0e4a9dca.jpg&w=3840&q=75" class="w3-round w3-image w3-opacity-min" alt="Menu" style="width:100%">
     </div>
   </div>
 
