@@ -10,7 +10,7 @@ variable "aws_region" { default = "ap_southeast_1" }
 variable "access_key" {}
 variable "secret_key" {}
 
-
+variable "environment" {}
 variable "create_by_name" {}
 
 variable "vpc_id" {}
