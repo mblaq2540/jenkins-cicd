@@ -6,7 +6,7 @@
 resource "aws_cloudwatch_event_rule" "stop_database_2000" {
   name                = "stop-database-lamda-event"
   description         = "-"
-  schedule_expression = "cron(00 07 ? * MON-SUN *)" // UTC
+  schedule_expression = "cron(30 03 ? * MON-SUN *)" // UTC
 }
 resource "aws_cloudwatch_event_target" "stop_database_2000" {
   rule      = aws_cloudwatch_event_rule.stop_database_2000.name
@@ -22,7 +22,7 @@ resource "aws_cloudwatch_event_target" "stop_database_2000" {
 resource "aws_cloudwatch_event_rule" "start_database_0800" {
   name                = "start-database-lamda-event"
   description         = "-"
-  schedule_expression = "cron(30 07 ? * MON-SUN *)" // UTC
+  schedule_expression = "cron(00 04 ? * MON-SUN *)" // UTC
 }
 resource "aws_cloudwatch_event_target" "start_database_0800" {
   rule      = aws_cloudwatch_event_rule.start_database_0800.name
@@ -39,7 +39,7 @@ resource "aws_cloudwatch_event_target" "start_database_0800" {
 resource "aws_cloudwatch_event_rule" "stop_ec2_2000" {
   name                = "stop-ec2-lamda-event"
   description         = "-"
-  schedule_expression = "cron(00 07 ? * MON-SUN *)" // +7UTC
+  schedule_expression = "cron(30 03 ? * MON-SUN *)" // +7UTC
   #"cron(30 03 ? * MON-SUN *)" 10:30am
   #"cron(30 01 ? * MON-SUN *)" 8:30am
   #"cron(30 23 ? * SUN-THU *)" 6:30am
@@ -58,7 +58,7 @@ resource "aws_cloudwatch_event_target" "stop_ec2_2000" {
 resource "aws_cloudwatch_event_rule" "start_ec2_0800" {
   name                = "start-ec2-lamda-event"
   description         = "-"
-  schedule_expression = "cron(30 07 ? * MON-SUN *)" // +7UTC
+  schedule_expression = "cron(00 04 ? * MON-SUN *)" // +7UTC
 }
 resource "aws_cloudwatch_event_target" "start_ec2_0800" {
   rule      = aws_cloudwatch_event_rule.start_ec2_0800.name

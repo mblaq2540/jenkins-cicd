@@ -12,14 +12,14 @@ environment    = "dev"
 create_by_name = "Miss. benja kuneepong created by terraform for tutorial"
 
 #default-vpc
-vpc_id   = "vpc-02fbc1d5d4461fd7c"
-subnet_a = "subnet-03bb22f103bf19fa6"
-subnet_b = "subnet-0109db63c688121db"
-subnet_c = "subnet-0951b73f064807ec9"
+vpc_id   = ""
+subnet_a = ""
+subnet_b = ""
+subnet_c = ""
 
 #amazon linux
 ec2_instance_image = "ami-0a6b545f62129c495" 
-ec2_instance_type  = "t3.large"
+ec2_instance_type  = "t2.large"
 
 #rds mysql
 rds_engine                    = "mysql"
@@ -31,5 +31,5 @@ rds_max_allocated_storage     = "440"
 rds_admin                     = "admin"
 rds_password                  = "vCXPp9mZISDGlpaniET8"
 rds_database_name             = "DB"
-rds_instance_type             = "db.m5.large"
+rds_instance_type             = "db.t4g.micro"
 rds_ca_cert_identifier        = "rds-ca-rsa4096-g1"

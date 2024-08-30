@@ -26,7 +26,7 @@ resource "aws_instance" "ec2-instance" {
   user_data = file("user-data.sh")
 
   root_block_device {
-    volume_size           = "200"
+    volume_size           = "150"
     volume_type           = "gp3"
     delete_on_termination = false
   }
@@ -34,7 +34,7 @@ resource "aws_instance" "ec2-instance" {
   
   tags = {
     Name        = "ec2-tutorial"
-    #"Automatic stop/start schedule" = "Enabled"
+    "Automatic stop/start schedule" = "Enabled"
   }
   
 

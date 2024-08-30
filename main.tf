@@ -20,7 +20,7 @@
  */
 # terraform {
 #   backend "s3" {
-#     bucket  = "s3-test-terraform-state-bucket"
+#     bucket  = ""
 #     key     = "terraform/dev/terraform.tfstate"
 #     region  = "ap-southeast-1"
 #     acl     = "bucket-owner-full-control"
@@ -45,6 +45,7 @@ provider "aws" {
   default_tags {
     tags = {
       Createby    = var.create_by_name
+      Environment = "${var.environment}"
     }
   }
 }
