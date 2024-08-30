@@ -4,7 +4,7 @@
  * Purpose : สร้าง bucket / กำหนด policy สำหรับการ access control list / กำหนด policy สำหรับการ access ใน bucket
  */
 resource "aws_s3_bucket" "terraform_state_bucket" {
-  bucket = "s3-tu-terraform-state-bucket"
+  bucket = "s3-tutorial-terraform-state-bucket"
   
    lifecycle {
      prevent_destroy = false
