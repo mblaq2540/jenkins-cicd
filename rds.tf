@@ -72,13 +72,13 @@ resource "aws_db_instance" "mysq_db" {
   allocated_storage     = var.rds_allocated_storage
   max_allocated_storage = var.rds_max_allocated_storage
 
-  # backup_window               = "00:00-03:00"
-  # backup_retention_period     = 7
-  # copy_tags_to_snapshot       = true
-  # skip_final_snapshot         = true
-  # deletion_protection         = false
-  # auto_minor_version_upgrade  = false
-  #apply_immediately          = true
+  backup_window               = "00:00-03:00"
+  backup_retention_period     = 7
+  copy_tags_to_snapshot       = true
+  skip_final_snapshot         = true
+  deletion_protection         = false
+  auto_minor_version_upgrade  = false
+  apply_immediately          = true
 
   # maintenance_window                    = "Mon:04:00-Mon:07:00"
   # enabled_cloudwatch_logs_exports       = ["error", "audit"]
