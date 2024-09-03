@@ -19,7 +19,7 @@ subnet_c = ""
 
 #amazon linux
 ec2_instance_image = "ami-0a6b545f62129c495" 
-ec2_instance_type  = "t2.large"
+ec2_instance_type  = "t2.medium"
 
 #rds mysql
 rds_engine                    = "mysql"

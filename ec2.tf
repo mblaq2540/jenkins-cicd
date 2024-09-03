@@ -9,6 +9,7 @@ resource "aws_key_pair" "ec2-instance" {
 
 
 
+
 }
 /**
  * Create by : Benja kuneepong
@@ -22,13 +23,13 @@ resource "aws_instance" "ec2-instance" {
 
   key_name               = aws_key_pair.ec2-instance.key_name
   subnet_id              = var.subnet_b
-  vpc_security_group_ids = [aws_security_group.ec2_web.id,aws_security_group.ec2_linux.id]
+  vpc_security_group_ids = [aws_security_group.ec2_web_sg.id,aws_security_group.ec2_linux_sg.id]
   user_data = file("user-data.sh")
 
   root_block_device {
-    volume_size           = "150"
+    volume_size           = "100"
     volume_type           = "gp3"
-    delete_on_termination = false
+    delete_on_termination = true
   }
 
   

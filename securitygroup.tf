@@ -3,8 +3,8 @@
  * Date : Wed, Aug  7, 2024  1:59:35 PM
  * Purpose : ใช้สำหรับอนุญาติให้ traffic ทั้งหมดเข้า EC2 linux ได้
  */
-resource "aws_security_group" "ec2_linux" {
-  name        = "ec2-linux-test-securitygroup"
+resource "aws_security_group" "ec2_linux_sg" {
+  name        = "ec2-linux-sg-securitygroup"
   description = "Allow ssh traffic to EC2 instances"
   vpc_id      = var.vpc_id
 
@@ -49,8 +49,8 @@ resource "aws_security_group" "ec2_linux" {
  * Date : Wed, Aug  7, 2024  1:59:35 PM
  * Purpose : ใช้สำหรับอนุญาติให้ traffic ทั้งหมดเข้า EC2 ด้วย protocol web ได้
  */
-resource "aws_security_group" "ec2_web" {
-  name        = "ec2-web-test-securitygroup"
+resource "aws_security_group" "ec2_web_sg" {
+  name        = "ec2-web-sg-securitygroup"
   description = "Allow web traffic to EC2 instances"
   vpc_id      = var.vpc_id
 
